@@ -1,0 +1,102 @@
+[
+  {
+    "player_id": 1,
+    "team_id": 1,
+    "team_name": "Utah Jazz",
+    "player_name": "Collin Sexton",
+    "jersey_number": 2,
+    "points": 0,
+    "rebounds": 0,
+    "assists": 0
+  },
+  {
+    "player_id": 2,
+    "team_id": 1,
+    "team_name": "Utah Jazz",
+    "player_name": "Ochai Agbagi",
+    "jersey_number": 30,
+    "points": 0,
+    "rebounds": 0,
+    "assists": 0
+  },
+  {
+    "player_id": 3,
+    "team_id": 1,
+    "team_name": "Utah Jazz",
+    "player_name": "Simone Fontecchio",
+    "jersey_number": 13,
+    "points": 0,
+    "rebounds": 0,
+    "assists": 0
+  },
+  {
+    "player_id": 4,
+    "team_id": 1,
+    "team_name": "Utah Jazz",
+    "player_name": "Lauri Markkanen",
+    "jersey_number": 24,
+    "points": 0,
+    "rebounds": 0,
+    "assists": 0
+  },
+  {
+    "player_id": 5,
+    "team_id": 1,
+    "team_name": "Utah Jazz",
+    "player_name": "Udoka Azubuike",
+    "jersey_number": 20,
+    "points": 0,
+    "rebounds": 0,
+    "assists": 0
+  },
+  {
+    "player_id": 6,
+    "team_id": 2,
+    "team_name": "Los Angeles Lakers",
+    "player_name": "Russell Westbrook",
+    "jersey_number": 0,
+    "points": 0,
+    "rebounds": 0,
+    "assists": 0
+  },
+  {
+    "player_id": 7,
+    "team_id": 2,
+    "team_name": "Los Angeles Lakers",
+    "player_name": "Kendrick Nunn",
+    "jersey_number": 12,
+    "points": 0,
+    "rebounds": 0,
+    "assists": 0
+  },
+  {
+    "player_id": 8,
+    "team_id": 2,
+    "team_name": "Los Angeles Lakers",
+    "player_name": "Lebron James",
+    "jersey_number": 6,
+    "points": 0,
+    "rebounds": 0,
+    "assists": 0
+  },
+  {
+    "player_id": 9,
+    "team_id": 2,
+    "team_name": "Los Angeles Lakers",
+    "player_name": "Anthony Davis",
+    "jersey_number": 3,
+    "points": 0,
+    "rebounds": 0,
+    "assists": 0
+  },
+  {
+    "player_id": 10,
+    "team_id": 2,
+    "team_name": "Los Angeles Lakers",
+    "player_name": "Thomas Bryant",
+    "jersey_number": 13,
+    "points": 0,
+    "rebounds": 0,
+    "assists": 0
+  }
+]

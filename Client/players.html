@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScoreBook+ - Players</title>
+    <link rel="stylesheet" href="./players.css" />
+  </head>
+  <body>
+    <header>
+      <a>ScoreBook+</a>
+
+      <div id="main">
+        <ul>
+          <a href="./games.html" id="wlFix">Games</a>
+        </ul>
+        <ul>
+          <a href="./teams.html">Teams</a>
+        </ul>
+        <ul>
+          <a href="./players.html">Players</a>
+        </ul>
+      </div>
+    </header>
+    <main>
+
+
+      <form>
+        <label>New player</label>
+        <select id = "teamID">
+         
+        </select>
+        <input id="playerName" type="text" placeholder="player's name"/>
+        
+        <input id="num" type="number" placeholder="jersey number"/>
+        <button id = "submit">submit</button>
+
+      </form>
+         
+
+      </form>
+     
+      <section id="playerDisplay"></section>
+
+    </main>
+
+
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./players.js"></script>
+  </body>
+</html>

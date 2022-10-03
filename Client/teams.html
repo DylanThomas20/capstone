@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScoreBook+ - Teams</title>
+    <link rel="stylesheet" href="./teams.css" />
+  </head>
+  <body>
+    <header>
+      <a>ScoreBook+</a>
+
+      <div id="main">
+        <ul>
+          <a href="./games.html" id="wlFix">Games</a>
+        </ul>
+        <ul>
+          <a href="./teams.html">Teams</a>
+        </ul>
+        <ul>
+          <a href="./players.html">Players</a>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <form>
+        <label id="team-name">New Team</label>
+        <input id="teamName2" type="text" placeholder="team name" />
+        <button id="submit">submit</button>
+      </form>
+
+      <section id="teamDisplay"></section>
+    </main>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./teams.js"></script>
+  </body>
+</html>

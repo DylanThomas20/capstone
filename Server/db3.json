@@ -1,0 +1,26 @@
+[
+  {
+    "game_id": 1,
+    "home_team": "Utah Jazz",
+    "home_score": 100,
+    "away_team": "Los Angeles Lakers",
+    "away_score": 89,
+    "game_over": true
+  },
+  {
+    "game_id": 2,
+    "home_team": "Utah Jazz",
+    "home_score": 120,
+    "away_team": "Los Angeles Lakers",
+    "away_score": 101,
+    "game_over": true
+  },
+  {
+    "game_id": 3,
+    "home_team": "Los Angeles Lakers",
+    "home_score": 99,
+    "away_team": "Utah Jazz",
+    "away_score": 96,
+    "game_over": false
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "team_id": 1,
+    "team_name": "Utah Jazz",
+    "wins": 0,
+    "losses": 0,
+    "roster": [
+      " Collin Sexton ",
+      " Ochai Agbagi ",
+      " Simone Fontecchio ",
+      " Lauri Markkanen ",
+      " Udoka Azubuike "
+    ]
+  },
+  {
+    "team_id": 2,
+    "team_name": "Los Angeles Lakers",
+    "wins": 0,
+    "losses": 0,
+    "roster": [
+      " Russell Westbrook ",
+      " Kendrick Nunn ",
+      " Lebron James ",
+      " Anthony Davis ",
+      " Thomas Bryant "
+    ]
+  }
+]
