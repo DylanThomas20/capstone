@@ -31,8 +31,8 @@ h1 {
 }
 
 #createPlayerForm {
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
   background-color: #bbcde5;
   display: flex;
   flex-direction: column;
@@ -43,6 +43,12 @@ h1 {
   border: black solid 2px;
 }
 
+label {
+  margin-bottom: 5%;
+  font-weight: 800;
+  font-size: 25px;
+}
+
 #formText {
   text-align: center;
   margin-left: 10%;
@@ -51,8 +57,10 @@ h1 {
   padding-bottom: 2%;
   display: flex;
   flex-direction: column;
+
   /* height: 10%;
   width: 50%; */
+  margin-bottom: 5%;
 }
 
 #main {

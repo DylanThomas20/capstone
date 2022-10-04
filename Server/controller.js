@@ -123,11 +123,13 @@ module.exports = {
   deletePlayer: (req, res) => {
     const index = players.findIndex((el) => el.player_id === +req.params.id);
 
-    // for(let i = 0; i < teams.length){
-    //   for(let j = 0; j < teams.roster.length; j++){
-    //     if(teams.)
-    //   }
-    // }
+    for (let i = 0; i < teams.length; i++) {
+      for (let j = 0; j < teams[i].roster.length; j++) {
+        if (teams[i].roster[j].trim() === players[index].player_name.trim()) {
+          teams[i].roster.splice(j, 1);
+        }
+      }
+    }
 
     players.splice(index, 1);
 
@@ -191,28 +193,34 @@ module.exports = {
   updateHomePoints: (req, res) => {
     const index = games.findIndex((el) => el.game_id === +req.params.id);
     const { type } = req.body;
+    if (games[index].game_over === false) {
+      if (type === "add") {
+        games[index].home_score++;
+      }
+      if (type === "subtract" && games[index].home_score > 0) {
+        games[index].home_score--;
+      }
 
-    if (type === "add") {
-      games[index].home_score++;
+      res.status(200).send(games[index]);
+    } else {
+      return console.log(`You can't add points to a game thats over.`);
     }
-    if (type === "subtract" && games[index].home_score > 0) {
-      games[index].home_score--;
-    }
-
-    res.status(200).send(games[index]);
   },
   updateAwayPoints: (req, res) => {
     const index = games.findIndex((el) => el.game_id === +req.params.id);
     const { type } = req.body;
+    if (games[index].game_over === false) {
+      if (type === "add") {
+        games[index].away_score++;
+      }
+      if (type === "subtract" && games[index].away_score > 0) {
+        games[index].away_score--;
+      }
 
-    if (type === "add") {
-      games[index].away_score++;
+      res.status(200).send(games[index]);
+    } else {
+      return console.log(`You can't add points to a game thats over.`);
     }
-    if (type === "subtract" && games[index].away_score > 0) {
-      games[index].away_score--;
-    }
-
-    res.status(200).send(games[index]);
   },
   updateGameResult: (req, res) => {
     const index = games.findIndex((el) => el.game_id === +req.params.id);

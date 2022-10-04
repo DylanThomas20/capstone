@@ -7,7 +7,7 @@ const showGames = document.querySelector("#gameDisplay");
 const gameOver = document.querySelector("#gameOver");
 
 const finalCheck = document.querySelector("#final");
-
+let final = "Not Final";
 const homePlayerAdd = document.querySelector("#addHome");
 const homePlayerSub = document.querySelector("#subHome");
 
@@ -34,7 +34,6 @@ const displayGames = (arr) => {
 const createGameCard = (game) => {
   const gameCard = document.createElement("section");
   gameCard.classList.add("team-card");
-  let final = "";
   if (game.game_over === true) {
     final = "Final";
   } else {
