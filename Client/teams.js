@@ -40,9 +40,10 @@ const createTeamCard = (team) => {
     <button onclick="deleteTeam(${team.team_id})" id = remove>X</button>
         <p id = "team_name">${team.team_name}</p>
       <div id="record">  
-        <p id = "w">Wins  ${team.wins}</p>
-        <p id = "l">Losses ${team.losses}</p>
-      <p> Roster: ${team.roster} </p>
+        <p id = "w">Wins:  ${team.wins}</p>
+        <p id = "l">Losses: ${team.losses}</p>
+        <p id = 'rostercss'> Roster:</p>
+      <p id = 'rostercss'> ${team.roster} </p>
 
     </div>
     `;
@@ -100,15 +101,18 @@ const removeLoss = (team_id, type) => {
 
 const addTeam = () => {
   let nameInput = document.querySelector("teamName2.value");
+  if (teamName2.value.length > 0) {
+    let newTeam = {
+      team_name: teamName2.value,
+    };
+    axios.post(`${baseURL}/addTeam`, newTeam).then((res) => {
+      showTeams.innerHTML = ``;
 
-  let newTeam = {
-    team_name: teamName2.value,
-  };
-  axios.post(`${baseURL}/addTeam`, newTeam).then((res) => {
-    showTeams.innerHTML = ``;
-
-    displayTeams(res.data);
-  });
+      displayTeams(res.data);
+    });
+  } else {
+    return alert(`Not valid team name`);
+  }
   // nameInput.value = " ";
   teamName2.value = "";
 };

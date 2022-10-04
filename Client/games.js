@@ -44,17 +44,27 @@ const createGameCard = (game) => {
   gameCard.innerHTML = `
     <div id="card">
     <button onclick="deleteGame(${game.game_id})" id = remove>X</button>
+    <div id="fullScoreBoard">   
+      <div id="homeScoreBoard">
         <p id = "homeTeamName">${game.home_team}</p>
         <p id = "homeTeamScore">${game.home_score}</p>
         <button onclick ="updateHomeScore(${game.game_id}, 'add')"id = addHome>+</button>
         <button onclick ="updateHomeScore(${game.game_id}, 'subtract')"id = subHome>-</button>
+      </div>
+      
+      <div id="awayScoreBoard">  
         <p id = "awayTeamName">${game.away_team}</p>
         <p id = "awayTeamScore">${game.away_score}</p>
         <button onclick ="updateAwayScore(${game.game_id}, 'add')"id = addAway>+</button>
         <button onclick ="updateAwayScore(${game.game_id}, 'subtract')"id = subAway>-</button>
-        <p id = "final">${final}</p>
-        <button onclick="updateWL(${game.game_id})">Update Final</button>
-    </div>
+        
+        </div>
+      </div
+        
+      <div id="finalC">  <p id = "final">${final}</p>
+        <button id="finalBtn" onclick="updateWL(${game.game_id})">Update Final</button>
+    </div>  
+  </div>
     `;
   showGames.appendChild(gameCard);
 
@@ -164,7 +174,7 @@ const subHPP = () => {};
 
 const resetRecord = () => {
   axios.put(`${baseURL}/setRecord`).then((res) => {
-    displayTeams(res.data);
+    // displayTeams(res.data);
   });
 };
 
@@ -176,5 +186,5 @@ wlFix.addEventListener("click", resetRecord);
 
 homeTeamSelect();
 awayTeamSelect();
-
+resetRecord();
 getAllGames();

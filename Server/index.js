@@ -32,6 +32,7 @@ const {
   updateHomePoints,
   updateAwayPoints,
   updateGameResult,
+  addHomeRoster,
 } = require("./controller");
 
 app.get("/getPlayers", getPlayers);
@@ -59,5 +60,6 @@ app.delete("/deleteGame/:id", deleteGame);
 app.put("/updateHomePoints/:id", updateHomePoints);
 app.put("/updateAwayPoints/:id", updateAwayPoints);
 app.put("/updateGameResult/:id", updateGameResult);
+app.put("/addHomeRoster/:id", addHomeRoster);
 
 app.listen(4567, () => console.log("server running on port 4567"));

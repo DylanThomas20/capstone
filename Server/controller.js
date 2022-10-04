@@ -3,7 +3,7 @@ const players = require("./db2.json");
 const games = require("./db3.json");
 let gameId = 4;
 let playerId = 11;
-let teamId = 2;
+let teamId = 3;
 // Get, Put, Delete, Push
 
 module.exports = {
@@ -123,6 +123,12 @@ module.exports = {
   deletePlayer: (req, res) => {
     const index = players.findIndex((el) => el.player_id === +req.params.id);
 
+    // for(let i = 0; i < teams.length){
+    //   for(let j = 0; j < teams.roster.length; j++){
+    //     if(teams.)
+    //   }
+    // }
+
     players.splice(index, 1);
 
     res.status(200).send(players);
@@ -189,7 +195,7 @@ module.exports = {
     if (type === "add") {
       games[index].home_score++;
     }
-    if (type === "subtract") {
+    if (type === "subtract" && games[index].home_score > 0) {
       games[index].home_score--;
     }
 
@@ -202,7 +208,7 @@ module.exports = {
     if (type === "add") {
       games[index].away_score++;
     }
-    if (type === "subtract") {
+    if (type === "subtract" && games[index].away_score > 0) {
       games[index].away_score--;
     }
 
@@ -221,18 +227,35 @@ module.exports = {
   createGame: (req, res) => {
     const { home_team, away_team } = req.body;
 
+    console.log(home_team);
+
+    let team_id = 0;
+
     let newGameObject = {
       game_id: gameId,
       home_team: home_team,
+      home_roster: [],
       home_score: 0,
       away_team: away_team,
+      away_roster: [],
       away_score: 0,
       game_over: false,
     };
+
+    for (let i = 0; i < teams.length; i++) {
+      if (newGameObject.away_team === teams[i].team_name) {
+        newGameObject.away_roster.push(teams[i].roster);
+      }
+      if (newGameObject.home_team === teams[i].team_name) {
+        newGameObject.home_roster.push(teams[i].roster);
+      }
+    }
+
     games.push(newGameObject);
 
     gameId++;
 
     res.status(200).send(games);
   },
+  addHomeRoster: (req, res) => {},
 };

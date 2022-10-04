@@ -9,14 +9,14 @@
   </head>
   <body>
     <header>
-      <a>ScoreBook+</a>
+      <h1>ScoreBook+</h1>
 
       <div id="main">
         <ul>
           <a href="./games.html" id="wlFix">Games</a>
         </ul>
         <ul>
-          <a href="./teams.html">Teams</a>
+          <a href="./teams.html"  id="wlFix">Teams</a>
         </ul>
         <ul>
           <a href="./players.html">Players</a>
@@ -26,8 +26,11 @@
     <main>
 
 
-      <form>
-        <label>New player</label>
+      <form id="createPlayer">
+        <div id="createPlayerForm">
+        
+        <div id="formText">
+          <label>New player:</label>
         <select id = "teamID">
          
         </select>
@@ -35,11 +38,12 @@
         
         <input id="num" type="number" placeholder="jersey number"/>
         <button id = "submit">submit</button>
+          </div>
 
       </form>
-         
+      </div>   
 
-      </form>
+     
      
       <section id="playerDisplay"></section>
 

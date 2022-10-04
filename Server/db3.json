@@ -2,25 +2,23 @@
   {
     "game_id": 1,
     "home_team": "Utah Jazz",
-    "home_score": 100,
+    "home_roster": [
+      " Collin Sexton ",
+      " Ochai Agbagi ",
+      " Simone Fontecchio ",
+      " Lauri Markkanen ",
+      " Udoka Azubuike "
+    ],
+    "home_score": 0,
     "away_team": "Los Angeles Lakers",
-    "away_score": 89,
-    "game_over": true
-  },
-  {
-    "game_id": 2,
-    "home_team": "Utah Jazz",
-    "home_score": 120,
-    "away_team": "Los Angeles Lakers",
-    "away_score": 101,
-    "game_over": true
-  },
-  {
-    "game_id": 3,
-    "home_team": "Los Angeles Lakers",
-    "home_score": 99,
-    "away_team": "Utah Jazz",
-    "away_score": 96,
+    "away_roster": [
+      " Russell Westbrook ",
+      " Kendrick Nunn ",
+      " Lebron James ",
+      " Anthony Davis ",
+      " Thomas Bryant "
+    ],
+    "away_score": 0,
     "game_over": false
   }
 ]

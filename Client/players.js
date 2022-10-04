@@ -38,10 +38,10 @@ const createPlayerCard = (player) => {
   playerCard.classList.add("player-card");
   playerCard.innerHTML = `
     <div id="card">
-    <button onclick="deletePlayer(${player.player_id})">X</button>
-        <p>${player.player_name}</p>
+    <button id="deleteBtn" onclick="deletePlayer(${player.player_id})">X</button>
+        <p id = "playerNameCard">${player.player_name}</p>
+        <p id = 'jerseyNumber'>#${player.jersey_number}</p>
         <p id = "teamName">${player.team_name}</p>
-        <p>${player.jersey_number}</p>
     </div>
     `;
   showPlayers.appendChild(playerCard);
@@ -82,31 +82,40 @@ const getTeamId = (teamName) => {
 const addPlayer = () => {
   // console.log("test");
 
-  let teamSelector = document.querySelector("#teamID");
-  let firstNameInput = document.querySelector("#firstName");
-  let lastNameInput = document.querySelector("#lastName");
-  let jerseyInput = document.querySelector("#num");
-  let teamNAME = document.querySelector("#teamID");
+  if (playerName.value.length > 0) {
+    if (num.value.length > 0) {
+      let teamSelector = document.querySelector("#teamID");
+      let firstNameInput = document.querySelector("#firstName");
+      let lastNameInput = document.querySelector("#lastName");
+      let jerseyInput = document.querySelector("#num");
+      let teamNAME = document.querySelector("#teamID");
 
-  if (num.value < 0) {
-    return alert(`Not a valid jersey number`);
+      if (num.value < 0) {
+        return alert(`Not a valid jersey number`);
+      }
+      if (num.value > 99) {
+        return alert(`Not a valid jersey number`);
+      }
+
+      let newPlayer = {
+        team_name: teamSelector[+teamSelector.value - 1].textContent,
+        team_id: +teamSelector.value,
+        player_name: playerName.value,
+        jersey_number: num.value,
+      };
+
+      axios.post(`${baseURL}/addPlayer`, newPlayer).then((res) => {
+        showPlayers.innerHTML = ``;
+
+        displayPlayers(res.data);
+      });
+    } else {
+      return alert(`Not a valid jersey number`);
+    }
+  } else {
+    return alert(`Not a valid player name`);
   }
-  if (num.value > 99) {
-    return alert(`Not a valid jersey number`);
-  }
 
-  let newPlayer = {
-    team_name: teamSelector[+teamSelector.value - 1].textContent,
-    team_id: +teamSelector.value,
-    player_name: playerName.value,
-    jersey_number: num.value,
-  };
-
-  axios.post(`${baseURL}/addPlayer`, newPlayer).then((res) => {
-    showPlayers.innerHTML = ``;
-
-    displayPlayers(res.data);
-  });
   playerName.value = "";
   num.value = "";
 };

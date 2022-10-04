@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+}
+
+header {
+  background-color: #639fab;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 80px;
+  border: solid #7ac0cd 5px;
+  box-shadow: 5px 5px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  height: 100%;
+  width: 100%;
+}
+
+header > div {
+  /* background-color: yellow; */
+  height: 100%;
+  width: 100%;
+  align-items: flex-end;
+}
+
+h1 {
+  color: white;
+
+  padding-left: 100px;
+}
+
+#createPlayerForm {
+  height: 150px;
+  width: 150px;
+  background-color: #bbcde5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5%;
+  margin-left: 42.5%;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+  border: black solid 2px;
+}
+
+#formText {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  /* height: 10%;
+  width: 50%; */
+}
+
+#main {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 80px;
+  width: 100%;
+}
+ul > a {
+  font-size: 28px;
+  height: 100%;
+  padding-right: 50px;
+  padding-top: 50px;
+}
+
+#playerDisplay {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  padding-top: 3%;
+  margin-left: 10%;
+}
+
+#card {
+  height: 200px;
+  width: 200px;
+  border: black solid 2px;
+
+  margin: 20px;
+  background-color: #bbcde5;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+  /* display: flex; */
+
+  /* justify-content: space-between; */
+}
+
+#playerNameCard {
+  font-size: 25px;
+  text-align: center;
+}
+
+#jerseyNumber {
+  margin: 0;
+  margin-top: 5%;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+#teamName {
+  font-size: 22px;
+  text-align: center;
+}
